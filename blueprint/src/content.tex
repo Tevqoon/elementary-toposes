@@ -5,3 +5,13 @@
 % If you want to split the blueprint content into several files then
 % the current file can be a simple sequence of \input. Otherwise It
 % can start with a \section or \chapter for instance.
+
+An \emph{elementary topos} is a Cartesian closed category with finite limits and a subobject classifier. The goal of this project is to formalise this definition in a suitable way. Namely, in mathlib, Cartesian closed categories are defined via \emph{chosen} finite products, which realise finite products as an algebraic operation in a category; for each finite product diagram we \emph{choose} a specific object to serve as the product, rather than only asking for the existence of such a product. We can still, using the axiom of choice, get chosen limits from existence.
+
+The first part of the project will be extending this to define finite chosen limits in general -- this will allow us to work more naturally in a topos, and keep with the existing definition of Cartesian closedness by getting an instance for chosen finite products from limits.
+
+The second part will be defining a subobject classifier, which we will again see as a chosen subobject classifier -- an object of truth values $\Omega$ in the category with a monomorphism $\operatorname{true} : 1 \rightarrow \Omega$ and a unique characteristic morphism $\chi_{U} : X \rightarrow \Omega$ for any monomorphism $U \rightarrow X$.
+
+If time permits, we will also define a chosen natural numbers object, allowing us to also consider NNO-topoi.
+
+After the definition, the goal will be to apply it and give instances for some common examples, like finite sets, $\operatorname{Type}$, presheaves, and sheaves.

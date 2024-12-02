@@ -6,7 +6,8 @@ package "elementary-toposes" where
   keywords := #["math"]
   leanOptions := #[
   ⟨`pp.unicode.fun, true⟩, -- pretty-prints `fun a ↦ b`
-  ⟨`autoImplicit, false⟩
+  ⟨`autoImplicit, false⟩,
+  ⟨`diagnostics, true⟩
 ]
 
 require "leanprover-community" / "mathlib"
