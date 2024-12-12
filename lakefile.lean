@@ -21,3 +21,4 @@ require checkdecls from git "https://github.com/PatrickMassot/checkdecls.git"
 meta if get_config? env = some "dev" then
 require «doc-gen4» from git
   "https://github.com/leanprover/doc-gen4" @ "main"
+require Paperproof from git "https://github.com/Paper-Proof/paperproof.git"@"main"/"lean"
