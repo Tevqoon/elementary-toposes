@@ -6,7 +6,9 @@
 % the current file can be a simple sequence of \input. Otherwise It
 % can start with a \section or \chapter for instance.
 
-An \emph{elementary topos} is a Cartesian closed category with finite limits and a subobject classifier. The goal of this project is to formalise this definition in a suitable way. Namely, in mathlib, Cartesian closed categories are defined via \emph{chosen} finite products, which realise finite products as an algebraic operation in a category; for each finite product diagram we \emph{choose} a specific object to serve as the product, rather than only asking for the existence of such a product. We can still, using the axiom of choice, get chosen limits from existence.
+\section{Introduction}
+
+An \emph{elementary topos} is a Cartesian closed category with finite limits and a subobject classifier. The goal of this project is to formalise this definition in a suitable way. Namely, in mathlib Cartesian closed categories are defined via \emph{chosen} finite products, which realise finite products as an algebraic operation in a category; for each finite product diagram we \emph{choose} a specific object to serve as the product, rather than only asking for the existence of such a product. Classically, we can still, using the axiom of choice, get chosen limits from existence.
 
 The first part of the project will be extending this to define finite chosen limits in general -- this will allow us to work more naturally in a topos, and keep with the existing definition of Cartesian closedness by getting an instance for chosen finite products from limits.
 
@@ -15,3 +17,23 @@ The second part will be defining a subobject classifier, which we will again see
 If time permits, we will also define a chosen natural numbers object, allowing us to also consider NNO-topoi.
 
 After the definition, the goal will be to apply it and give instances for some common examples, like finite sets, $\operatorname{Type}$, presheaves, and sheaves.
+
+\section{Chosen Finite Limits}
+
+The first step is to generalise chosen finite products to general finite limit cones.
+
+\begin{definition}[Chosen Limit]
+\label{def:chosen_limit}
+\lean{ChosenLimit}
+Let $F : J \to C$ be a functor. A \emph{chosen limit} for $F$ is a specified limit cone for $F$.
+\end{definition}
+
+\section{Subobject Classifiers}
+\section{Elementary Toposes}
+\section{Natural Numbers Objects (Optional)}
+\section{Examples}
+\subsection{Finite Sets}
+\subsection{The Category of Types}
+\subsection{Presheaves}
+\subsection{Sheaves}
+\section{Further Developments}

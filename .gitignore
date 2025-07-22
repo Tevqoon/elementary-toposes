@@ -1,2 +1,5 @@
 /.lake
 .DS_Store
+*#
+/blueprint/src/auto/
+/blueprint/src/macros/auto/

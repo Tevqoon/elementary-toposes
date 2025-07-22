@@ -29,12 +29,73 @@
 
 
 <div class="main-text">
- <div class="titlepage">
+<div class="titlepage">
 <h1>Elementary Toposes</h1>
 <p class="authors">
 <span class="author">Jure Smolar</span>
 </p>
-</div> 
+</div>
+<h1 id="a0000000002">1 Introduction</h1>
+<p>An <em>elementary topos</em> is a Cartesian closed category with finite limits and a subobject classifier. The goal of this project is to formalise this definition in a suitable way. Namely, in mathlib Cartesian closed categories are defined via <em>chosen</em> finite products, which realise finite products as an algebraic operation in a category; for each finite product diagram we <em>choose</em> a specific object to serve as the product, rather than only asking for the existence of such a product. Classically, we can still, using the axiom of choice, get chosen limits from existence. </p>
+<p>The first part of the project will be extending this to define finite chosen limits in general – this will allow us to work more naturally in a topos, and keep with the existing definition of Cartesian closedness by getting an instance for chosen finite products from limits. </p>
+<p>The second part will be defining a subobject classifier, which we will again see as a chosen subobject classifier – an object of truth values \(\Omega \) in the category with a monomorphism \(\operatorname {true} : 1 \rightarrow \Omega \) and a unique characteristic morphism \(\chi _{U} : X \rightarrow \Omega \) for any monomorphism \(U \rightarrow X\). </p>
+<p>If time permits, we will also define a chosen natural numbers object, allowing us to also consider NNO-topoi. </p>
+<p>After the definition, the goal will be to apply it and give instances for some common examples, like finite sets, \(\operatorname {Type}\), presheaves, and sheaves. </p>
+<h1 id="a0000000003">2 Chosen Finite Limits</h1>
+<p>The first step is to generalise chosen finite products to general finite limit cones. </p>
+<div class="definition_thmwrapper theorem-style-definition" id="def:chosen_limit">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1</span>
+    <span class="definition_thmtitle">Chosen Limit</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#def:chosen_limit">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/ChosenLimit" class="lean_decl">ChosenLimit</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>   Let \(F : J \to C\) be a functor. A <em>chosen limit</em> for \(F\) is a specified limit cone for \(F\). </p>
+
+  </div>
+</div>
+<h1 id="a0000000004">3 Subobject Classifiers</h1>
+<p> test </p>
+<h1 id="a0000000005">4 Elementary Toposes</h1>
+<h1 id="a0000000006">5 Natural Numbers Objects (Optional)</h1>
+<h1 id="a0000000007">6 Examples</h1>
+<h2 id="a0000000008">6.1 Finite Sets</h2>
+<h2 id="a0000000009">6.2 The Category of Types</h2>
+<h2 id="a0000000010">6.3 Presheaves</h2>
+<h2 id="a0000000011">6.4 Sheaves</h2>
+<h1 id="a0000000012">7 Further Developments</h1>
+
 </div> <!--main-text -->
 </div> <!-- content-wrapper -->
 </div> <!-- content -->

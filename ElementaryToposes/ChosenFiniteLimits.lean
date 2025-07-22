@@ -35,8 +35,4 @@ class ChosenFiniteLimits (C : Type u) [Category.{v, u} C] where
   out (J : Type) [𝒥 : SmallCategory J] [@FinCategory J 𝒥] : @ChosenLimitsOfShape J 𝒥 C _
 
 /-- An instance giving us chosen finite products from given chosen finite limits. -/
-instance (d : ChosenFiniteLimits C) : ChosenFiniteProducts C := by
-  constructor
-  intro X Y
-  have P := pair X Y
-  have H := d.out
+instance (d : ChosenFiniteLimits C) : ChosenFiniteProducts C := sorry
