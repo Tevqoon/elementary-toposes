@@ -1,0 +1,6 @@
+PWD /Users/jure/Documents/repos/elementary-toposes/blueprint/src
+INPUT /usr/local/texlive/2022/texmf.cnf
+INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/latex.fmt
+INPUT outline.tex
+OUTPUT /Users/jure/Documents/repos/elementary-toposes/blueprint/print/outline.log
