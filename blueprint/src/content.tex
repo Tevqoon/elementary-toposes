@@ -31,22 +31,29 @@ Let $F : J \to C$ be a functor. A \emph{chosen limit} for $F$ is a specified lim
 
 \begin{proposition}[Chosen Limit implies Limit]
 \label{prop:chosen-limit-implies-limit}
-\lean{CategoryTheory.Limits.hasLimit_From_chosenLimit} 
+\lean{CategoryTheory.Limits.hasLimit_From_chosenLimit}
 \leanok
 \uses{def:chosen-limit}
 If we have a chosen limit for a functor $F$, then $F$ has a limit.
 \end{proposition}
 
+\begin{proof}
+  \leanok
+  An inhabited set is nonempty.
+\end{proof}
+
 \begin{definition}[Chosen Limits of Shape]
   \label{def:chosen-limits-of-shape}
   \lean{CategoryTheory.Limits.ChosenLimitsOfShape}
+  \uses{def:chosen-limit}
   \leanok
 A category $C$ has \emph{chosen limits of shape} $J$ if every functor $F : J \to C$ has a chosen limit.
-\end{definition} 
+\end{definition}
 
 \begin{definition}[Chosen Finite Limits]
 \label{def:chosen-finite-limits}
 \lean{CategoryTheory.Limits.ChosenFiniteLimits}
+\uses{def:chosen-limits-of-shape}
 \leanok
 A category $C$ has \emph{chosen finite limits} if it has chosen limits of shape $J$ for every finite category $J$, i.~e.~ for every finite limit cone.
 \end{definition}
@@ -69,7 +76,8 @@ Note that our definition is compatible, so that a category with chosen finite li
 
 \begin{lemma}[Chosen Finite Products from Limits]
   \label{lem:chosen-finite-products-from-limits}
-\lean{CategoryTheory.Limits.ChosenFiniteProducts_From_ChosenFiniteLimits}
+  \lean{CategoryTheory.Limits.ChosenFiniteProducts_From_ChosenFiniteLimits}
+  \leanok
 \uses{def:chosen-finite-limits, def:chosen-finite-products}
 If a category $C$ has chosen finite limits, then it has chosen finite products.
 \end{lemma}
