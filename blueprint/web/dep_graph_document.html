@@ -63,13 +63,80 @@
 <div id="statements">
 
     
-    <div class="dep-modal-container" id="def:chosen_limit_modal">
+    <div class="dep-modal-container" id="def:chosen-finite-limits_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
 <svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         
-  <div class="thm" id="def:chosen_limit" style="display: none">
+  <div class="thm" id="def:chosen-finite-limits" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">4</span><span class="definition_thmtitle">Chosen Finite Limits</span></div>
+    <div class="thm_thmcontent"><p>   A category \(C\) has <em>chosen finite limits</em> if it has chosen limits of shape \(J\) for every finite category \(J\), i.&#160;e.&#160; for every finite limit cone. </p>
+</div>
+
+    <a class="latex_link" href="index.html#def:chosen-finite-limits">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.ChosenFiniteLimits">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:chosen-finite-products_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:chosen-finite-products" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">5</span><span class="definition_thmtitle">Chosen Finite Products</span></div>
+    <div class="thm_thmcontent"><p>   A category \(C\) has <em>chosen finite products</em> if it is equipped with: </p>
+<ul class="itemize">
+  <li><p>A choice of a limit binary fan (product) for any two objects of the category. </p>
+</li>
+  <li><p>A choice of a terminal object. </p>
+</li>
+</ul>
+<p> More precisely, this consists of chosen limit cones for the pair functor \(X \leftarrow \cdot \rightarrow Y\) and for the empty functor from the empty category. </p>
+</div>
+
+    <a class="latex_link" href="index.html#def:chosen-finite-products">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.ChosenFiniteProducts">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:chosen-limit_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:chosen-limit" style="display: none">
     <div class="thm_thmheading">
       <span class="definition_thmcaption">
       Definition
@@ -78,10 +145,100 @@
     <div class="thm_thmcontent"><p>   Let \(F : J \to C\) be a functor. A <em>chosen limit</em> for \(F\) is a specified limit cone for \(F\). </p>
 </div>
 
-    <a class="latex_link" href="index.html#def:chosen_limit">LaTeX</a>
+    <a class="latex_link" href="index.html#def:chosen-limit">LaTeX</a>
     
     
   <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.ChosenLimit">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:chosen-limits-of-shape_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:chosen-limits-of-shape" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">3</span><span class="definition_thmtitle">Chosen Limits of Shape</span></div>
+    <div class="thm_thmcontent"><p>   A category \(C\) has <em>chosen limits of shape</em> \(J\) if every functor \(F : J \to C\) has a chosen limit. </p>
+</div>
+
+    <a class="latex_link" href="index.html#def:chosen-limits-of-shape">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.ChosenLimitsOfShape">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="lem:chosen-finite-products-from-limits_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="lem:chosen-finite-products-from-limits" style="display: none">
+    <div class="thm_thmheading">
+      <span class="lemma_thmcaption">
+      Lemma
+      </span>
+      <span class="lemma_thmlabel">6</span><span class="lemma_thmtitle">Chosen Finite Products from Limits</span></div>
+    <div class="thm_thmcontent"><p>    If a category \(C\) has chosen finite limits, then it has chosen finite products. </p>
+</div>
+
+    <a class="latex_link" href="index.html#lem:chosen-finite-products-from-limits">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.ChosenFiniteProducts_From_ChosenFiniteLimits">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="prop:chosen-limit-implies-limit_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="prop:chosen-limit-implies-limit" style="display: none">
+    <div class="thm_thmheading">
+      <span class="proposition_thmcaption">
+      Proposition
+      </span>
+      <span class="proposition_thmlabel">2</span><span class="proposition_thmtitle">Chosen Limit implies Limit</span></div>
+    <div class="thm_thmcontent"><p>    If we have a chosen limit for a functor \(F\), then \(F\) has a limit. </p>
+</div>
+
+    <a class="latex_link" href="index.html#prop:chosen-limit-implies-limit">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.hasLimit_From_chosenLimit">Lean</a>
     
     
   
@@ -109,7 +266,7 @@ graphContainer.graphviz({useWorker: true})
     .width(width)
     .height(height)
     .fit(true)
-    .renderDot(`strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	"def:chosen_limit"	[color=green,		fillcolor="#B0ECA3",		label=chosen_limit,		shape=box,		style=filled];}`)
+    .renderDot(`strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	"def:chosen-limit"	[color=green,		fillcolor="#B0ECA3",		label="chosen-limit",		shape=box,		style=filled];	"prop:chosen-limit-implies-limit"	[color=green,		label="chosen-limit-implies-limit",		shape=ellipse];	"def:chosen-limit" -> "prop:chosen-limit-implies-limit"	[style=dashed];	"lem:chosen-finite-products-from-limits"	[color=blue,		fillcolor="#1CAC78",		label="chosen-finite-products-from-limits",		shape=ellipse,		style=filled];	"def:chosen-finite-limits"	[color=green,		fillcolor="#B0ECA3",		label="chosen-finite-limits",		shape=box,		style=filled];	"def:chosen-finite-limits" -> "lem:chosen-finite-products-from-limits"	[style=dashed];	"def:chosen-finite-products"	[color=darkgreen,		fillcolor="#B0ECA3",		label="chosen-finite-products",		shape=box,		style=filled];	"def:chosen-finite-products" -> "lem:chosen-finite-products-from-limits"	[style=dashed];	"def:chosen-limits-of-shape"	[color=green,		fillcolor="#B0ECA3",		label="chosen-limits-of-shape",		shape=box,		style=filled];}`)
     .on("end", interactive);
 
 latexLabelEscaper = function(label) {

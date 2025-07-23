@@ -20,21 +20,69 @@ After the definition, the goal will be to apply it and give instances for some c
 
 \section{Chosen Finite Limits}
 
-The first step is to generalise chosen finite products to general finite limit cones.
+The first step is to generalise chosen finite products to general finite limit cones. Note that chosen limits are also limits in the sense of there existing a limit cone. Being a chosen limit is a strictly stronger property.
 
 \begin{definition}[Chosen Limit]
-  \label{def:chosen_limit}
+  \label{def:chosen-limit}
   \lean{CategoryTheory.Limits.ChosenLimit}
   \leanok
 Let $F : J \to C$ be a functor. A \emph{chosen limit} for $F$ is a specified limit cone for $F$.
 \end{definition}
 
+\begin{proposition}[Chosen Limit implies Limit]
+\label{prop:chosen-limit-implies-limit}
+\lean{CategoryTheory.Limits.hasLimit_From_chosenLimit} 
+\leanok
+\uses{def:chosen-limit}
+If we have a chosen limit for a functor $F$, then $F$ has a limit.
+\end{proposition}
+
+\begin{definition}[Chosen Limits of Shape]
+  \label{def:chosen-limits-of-shape}
+  \lean{CategoryTheory.Limits.ChosenLimitsOfShape}
+  \leanok
+A category $C$ has \emph{chosen limits of shape} $J$ if every functor $F : J \to C$ has a chosen limit.
+\end{definition} 
+
+\begin{definition}[Chosen Finite Limits]
+\label{def:chosen-finite-limits}
+\lean{CategoryTheory.Limits.ChosenFiniteLimits}
+\leanok
+A category $C$ has \emph{chosen finite limits} if it has chosen limits of shape $J$ for every finite category $J$, i.~e.~ for every finite limit cone.
+\end{definition}
+
+Note that Mathlib already provides a concept of chosen finite product it uses internally for Cartesian closed categories.
+
+\begin{definition}[Chosen Finite Products]
+\label{def:chosen-finite-products}
+\lean{CategoryTheory.ChosenFiniteProducts}
+\mathlibok
+A category $C$ has \emph{chosen finite products} if it is equipped with:
+\begin{itemize}
+\item A choice of a limit binary fan (product) for any two objects of the category.
+\item A choice of a terminal object.
+\end{itemize}
+More precisely, this consists of chosen limit cones for the pair functor $X \leftarrow \cdot \rightarrow Y$ and for the empty functor from the empty category.
+\end{definition}
+
+Note that our definition is compatible, so that a category with chosen finite limits in particular has an instance of chosen finite products.
+
+\begin{lemma}[Chosen Finite Products from Limits]
+  \label{lem:chosen-finite-products-from-limits}
+\lean{CategoryTheory.Limits.ChosenFiniteProducts_From_ChosenFiniteLimits}
+\uses{def:chosen-finite-limits, def:chosen-finite-products}
+If a category $C$ has chosen finite limits, then it has chosen finite products.
+\end{lemma}
+
+\begin{proof}
+  We construct the limit cones for the pair and the terminal object.
+  \leanok
+\end{proof}
+
 \section{Subobject Classifiers}
 \section{Elementary Toposes}
-\section{Natural Numbers Objects (Optional)}
 \section{Examples}
 \subsection{Finite Sets}
 \subsection{The Category of Types}
 \subsection{Presheaves}
 \subsection{Sheaves}
-\section{Further Developments}

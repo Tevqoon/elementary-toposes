@@ -22,7 +22,7 @@ class ChosenLimit (F : J ⥤ C) where
   chosen_limit : Inhabited (LimitCone F)
 
 /-- A chosen limit for a given cone is also a limit. -/
-instance {F : J ⥤ C} (d : ChosenLimit F) : HasLimit F := by
+instance hasLimit_From_chosenLimit {F : J ⥤ C} (d : ChosenLimit F) : HasLimit F := by
   constructor
   exact ⟨d.chosen_limit.default⟩
 
@@ -35,4 +35,14 @@ class ChosenFiniteLimits (C : Type u) [Category.{v, u} C] where
   out (J : Type) [𝒥 : SmallCategory J] [@FinCategory J 𝒥] : @ChosenLimitsOfShape J 𝒥 C _
 
 /-- An instance giving us chosen finite products from given chosen finite limits. -/
-instance (d : ChosenFiniteLimits C) : ChosenFiniteProducts C := sorry
+noncomputable instance ChosenFiniteProducts_From_ChosenFiniteLimits (d : ChosenFiniteLimits C) : ChosenFiniteProducts C := by
+  constructor
+  intro X Y
+  case product =>
+    have h1 : ChosenLimitsOfShape (Discrete WalkingPair) C := d.out (Discrete WalkingPair)
+    have h2 := h1.chosen_limits (pair X Y)
+    exact h2.chosen_limit.default
+  case terminal =>
+    have h1 : ChosenLimitsOfShape (Discrete PEmpty) C := d.out (Discrete PEmpty)
+    have h2 : ChosenLimit (empty C) := h1.chosen_limits (empty C)
+    exact h2.chosen_limit.default

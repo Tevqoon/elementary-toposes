@@ -1,1 +1,6 @@
 CategoryTheory.Limits.ChosenLimit
+CategoryTheory.Limits.hasLimit_From_chosenLimit
+CategoryTheory.Limits.ChosenLimitsOfShape
+CategoryTheory.Limits.ChosenFiniteLimits
+CategoryTheory.ChosenFiniteProducts
+CategoryTheory.Limits.ChosenFiniteProducts_From_ChosenFiniteLimits

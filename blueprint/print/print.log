@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.24)  22 JUL 2025 18:11
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.24)  23 JUL 2025 17:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1024,21 +1024,22 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 6.99925pt on input line 15.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 15.
-) [1
 
-] [2]
+[1
+
+]) [2]
 (/Users/jure/Documents/repos/elementary-toposes/blueprint/print/print.aux)
 Package rerunfilecheck Info: File `print.out' has not changed.
-(rerunfilecheck)             Checksum: AC1BDD4D9B07823E4BADDACBF3E1A9A6;1483.
+(rerunfilecheck)             Checksum: 0276B4426A51DE01654D671C8FFBCCE8;1107.
  ) 
 Here is how much of TeX's memory you used:
- 27779 strings out of 476179
- 562738 string characters out of 5809544
- 1040861 words of memory out of 5000000
- 48095 multiletter control sequences out of 15000+600000
+ 27784 strings out of 476179
+ 562893 string characters out of 5809544
+ 1045861 words of memory out of 5000000
+ 48100 multiletter control sequences out of 15000+600000
  474614 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 100i,6n,115p,633b,324s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 100i,6n,115p,633b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on /Users/jure/Documents/repos/elementary-toposes/blueprint/prin
 t/print.pdf (2 pages).

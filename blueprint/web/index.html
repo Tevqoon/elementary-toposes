@@ -42,8 +42,8 @@
 <p>If time permits, we will also define a chosen natural numbers object, allowing us to also consider NNO-topoi. </p>
 <p>After the definition, the goal will be to apply it and give instances for some common examples, like finite sets, \(\operatorname {Type}\), presheaves, and sheaves. </p>
 <h1 id="a0000000003">2 Chosen Finite Limits</h1>
-<p>The first step is to generalise chosen finite products to general finite limit cones. </p>
-<div class="definition_thmwrapper theorem-style-definition" id="def:chosen_limit">
+<p>The first step is to generalise chosen finite products to general finite limit cones. Note that chosen limits are also limits in the sense of there existing a limit cone. Being a chosen limit is a strictly stronger property. </p>
+<div class="definition_thmwrapper theorem-style-definition" id="def:chosen-limit">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
@@ -57,7 +57,7 @@
         </div>
     <div class="thm_header_hidden_extras">
 
-    <a class="icon proof" href="index.html#def:chosen_limit">#</a>
+    <a class="icon proof" href="index.html#def:chosen-limit">#</a>
     
     
     
@@ -87,15 +87,297 @@
 
   </div>
 </div>
-<h1 id="a0000000004">3 Subobject Classifiers</h1>
-<h1 id="a0000000005">4 Elementary Toposes</h1>
-<h1 id="a0000000006">5 Natural Numbers Objects (Optional)</h1>
-<h1 id="a0000000007">6 Examples</h1>
-<h2 id="a0000000008">6.1 Finite Sets</h2>
-<h2 id="a0000000009">6.2 The Category of Types</h2>
-<h2 id="a0000000010">6.3 Presheaves</h2>
-<h2 id="a0000000011">6.4 Sheaves</h2>
-<h1 id="a0000000012">7 Further Developments</h1>
+<div class="proposition_thmwrapper theorem-style-plain" id="prop:chosen-limit-implies-limit">
+  <div class="proposition_thmheading">
+    <span class="proposition_thmcaption">
+    Proposition
+    </span>
+    <span class="proposition_thmlabel">2</span>
+    <span class="proposition_thmtitle">Chosen Limit implies Limit</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#prop:chosen-limit-implies-limit">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="index.html#def:chosen-limit">Definition 1</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.hasLimit_From_chosenLimit" class="lean_decl">CategoryTheory.Limits.hasLimit_From_chosenLimit</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="proposition_thmcontent">
+  <p>    If we have a chosen limit for a functor \(F\), then \(F\) has a limit. </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="def:chosen-limits-of-shape">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">3</span>
+    <span class="definition_thmtitle">Chosen Limits of Shape</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#def:chosen-limits-of-shape">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.ChosenLimitsOfShape" class="lean_decl">CategoryTheory.Limits.ChosenLimitsOfShape</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>   A category \(C\) has <em>chosen limits of shape</em> \(J\) if every functor \(F : J \to C\) has a chosen limit. </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="def:chosen-finite-limits">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">4</span>
+    <span class="definition_thmtitle">Chosen Finite Limits</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#def:chosen-finite-limits">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.ChosenFiniteLimits" class="lean_decl">CategoryTheory.Limits.ChosenFiniteLimits</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>   A category \(C\) has <em>chosen finite limits</em> if it has chosen limits of shape \(J\) for every finite category \(J\), i.&#160;e.&#160; for every finite limit cone. </p>
+
+  </div>
+</div>
+<p>Note that Mathlib already provides a concept of chosen finite product it uses internally for Cartesian closed categories. </p>
+<div class="definition_thmwrapper theorem-style-definition" id="def:chosen-finite-products">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">5</span>
+    <span class="definition_thmtitle">Chosen Finite Products</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#def:chosen-finite-products">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.ChosenFiniteProducts" class="lean_decl">CategoryTheory.ChosenFiniteProducts</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>   A category \(C\) has <em>chosen finite products</em> if it is equipped with: </p>
+<ul class="itemize">
+  <li><p>A choice of a limit binary fan (product) for any two objects of the category. </p>
+</li>
+  <li><p>A choice of a terminal object. </p>
+</li>
+</ul>
+<p> More precisely, this consists of chosen limit cones for the pair functor \(X \leftarrow \cdot \rightarrow Y\) and for the empty functor from the empty category. </p>
+
+  </div>
+</div>
+<p>Note that our definition is compatible, so that a category with chosen finite limits in particular has an instance of chosen finite products. </p>
+<div class="lemma_thmwrapper theorem-style-plain" id="lem:chosen-finite-products-from-limits">
+  <div class="lemma_thmheading">
+    <span class="lemma_thmcaption">
+    Lemma
+    </span>
+    <span class="lemma_thmlabel">6</span>
+    <span class="lemma_thmtitle">Chosen Finite Products from Limits</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#lem:chosen-finite-products-from-limits">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000004"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="index.html#def:chosen-finite-limits">Definition 4</a></li>
+          
+          <li><a href="index.html#def:chosen-finite-products">Definition 5</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.ChosenFiniteProducts_From_ChosenFiniteLimits" class="lean_decl">CategoryTheory.Limits.ChosenFiniteProducts_From_ChosenFiniteLimits</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="lemma_thmcontent">
+  <p>    If a category \(C\) has chosen finite limits, then it has chosen finite products. </p>
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000004">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>We construct the limit cones for the pair and the terminal object. </p>
+
+  </div>
+</div>
+<h1 id="a0000000005">3 Subobject Classifiers</h1>
+<h1 id="a0000000006">4 Elementary Toposes</h1>
+<h1 id="a0000000007">5 Examples</h1>
+<h2 id="a0000000008">5.1 Finite Sets</h2>
+<h2 id="a0000000009">5.2 The Category of Types</h2>
+<h2 id="a0000000010">5.3 Presheaves</h2>
+<h2 id="a0000000011">5.4 Sheaves</h2>
 
 </div> <!--main-text -->
 </div> <!-- content-wrapper -->
