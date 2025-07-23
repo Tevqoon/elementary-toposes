@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1753282887 "print.tex" "/Users/jure/Documents/repos/elementary-toposes/blueprint/print/print.pdf" "print" 1753282888
-  "/Users/jure/Documents/repos/elementary-toposes/blueprint/print/print.aux" 1753282888 2200 462bd7f59f332f1587ebcf0569cd61a1 "pdflatex"
-  "/Users/jure/Documents/repos/elementary-toposes/blueprint/print/print.out" 1753282888 1107 0276b4426a51de01654d671c8ffbcce8 "pdflatex"
+["pdflatex"] 1753290146 "print.tex" "/Users/jure/Documents/repos/elementary-toposes/blueprint/print/print.pdf" "print" 1753290147
+  "/Users/jure/Documents/repos/elementary-toposes/blueprint/print/print.aux" 1753290147 2945 6ffb8ffa9f7a31836fd6a9198a717b88 "pdflatex"
+  "/Users/jure/Documents/repos/elementary-toposes/blueprint/print/print.out" 1753290147 1254 7d9883a29fb2cc642cca7bcc677409d8 "pdflatex"
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -155,7 +155,7 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1658699192 5419893 bae5dddaf94fa8eef355499e3982a8b4 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "content.tex" 1753282884 4601 3c9c2dd242b8fc90f4311df2f9f57d7e ""
+  "content.tex" 1753290145 8178 fe36830f574ed294eb2708dc23a73869 ""
   "macros/common.tex" 1753199073 822 8b43e8bc3121216589e3000e11725d0c ""
   "macros/print.tex" 1731666545 1101 87627b2ec24fef68edc71c13f43f7bab ""
   "print.tex" 1753198491 1224 40173e9479390d24a2a167e8d5a31aa0 ""

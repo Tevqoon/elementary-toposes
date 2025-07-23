@@ -63,6 +63,37 @@
 <div id="statements">
 
     
+    <div class="dep-modal-container" id="def:cartesian-closed_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:cartesian-closed" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">10</span><span class="definition_thmtitle">Cartesian closed category</span></div>
+    <div class="thm_thmcontent"><p>    A category \(\mathcal{C}\) is <em>cartesian closed</em> if it has finite products and every object is exponentiable. </p>
+<p>We define this as a monoidal closed category with respect to the cartesian monoidal structure. </p>
+</div>
+
+    <a class="latex_link" href="index.html#def:cartesian-closed">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.CartesianClosed">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
     <div class="dep-modal-container" id="def:chosen-finite-limits_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
@@ -74,14 +105,14 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">4</span><span class="definition_thmtitle">Chosen Finite Limits</span></div>
-    <div class="thm_thmcontent"><p>   A category \(C\) has <em>chosen finite limits</em> if it has chosen limits of shape \(J\) for every finite category \(J\), i.&#160;e.&#160; for every finite limit cone. </p>
+      <span class="definition_thmlabel">5</span><span class="definition_thmtitle">Chosen Finite Limits</span></div>
+    <div class="thm_thmcontent"><p>    A category \(C\) has <em>chosen finite limits</em> if it has chosen limits of shape \(J\) for every finite category \(J\), i.&#160;e.&#160; for every finite limit cone. </p>
 </div>
 
     <a class="latex_link" href="index.html#def:chosen-finite-limits">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.ChosenFiniteLimits">Lean</a>
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.ChosenFiniteLimits">Lean</a>
     
     
   
@@ -104,7 +135,7 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">5</span><span class="definition_thmtitle">Chosen Finite Products</span></div>
+      <span class="definition_thmlabel">6</span><span class="definition_thmtitle">Chosen Finite Products</span></div>
     <div class="thm_thmcontent"><p>   A category \(C\) has <em>chosen finite products</em> if it is equipped with: </p>
 <ul class="itemize">
   <li><p>A choice of a limit binary fan (product) for any two objects of the category. </p>
@@ -148,7 +179,7 @@
     <a class="latex_link" href="index.html#def:chosen-limit">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.ChosenLimit">Lean</a>
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.ChosenLimit">Lean</a>
     
     
   
@@ -171,14 +202,220 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">3</span><span class="definition_thmtitle">Chosen Limits of Shape</span></div>
-    <div class="thm_thmcontent"><p>   A category \(C\) has <em>chosen limits of shape</em> \(J\) if every functor \(F : J \to C\) has a chosen limit. </p>
+      <span class="definition_thmlabel">4</span><span class="definition_thmtitle">Chosen Limits of Shape</span></div>
+    <div class="thm_thmcontent"><p>    A category \(C\) has <em>chosen limits of shape</em> \(J\) if every functor \(F : J \to C\) has a chosen limit. </p>
 </div>
 
     <a class="latex_link" href="index.html#def:chosen-limits-of-shape">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.ChosenLimitsOfShape">Lean</a>
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.ChosenLimitsOfShape">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:elementary_topos_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:elementary_topos" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">12</span><span class="definition_thmtitle">Elementary Topos</span></div>
+    <div class="thm_thmcontent"><p>    An <em>elementary topos</em> is a category \(\mathcal{C}\) that </p>
+<ol class="enumerate">
+  <li><p>has chosen finite limits, </p>
+</li>
+  <li><p>is cartesian closed for the inherited chosen finite products, </p>
+</li>
+  <li><p>has a subobject classifier. </p>
+</li>
+</ol>
+</div>
+
+    <a class="latex_link" href="index.html#def:elementary_topos">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.ElementaryTopos">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:monoidal-category_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:monoidal-category" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">8</span><span class="definition_thmtitle">Monoidal category</span></div>
+    <div class="thm_thmcontent">
+<p>In a <em>monoidal category</em> \(\mathcal{C}\), we can take the <em>tensor product</em> of objects, \(X ⊗ Y\) and of morphisms \(f ⊗ g\). The tensor product does not need to be strictly associative on objects, but there is a specified <em>associator</em>, \(α_{X Y Z} : (X ⊗ Y) ⊗ Z ≅ X ⊗ (Y ⊗ Z)\). There is a tensor unit \(\mathbf{1}_{\mathcal{C}}\), with specified left and right <em>unitor isomorphisms</em> \(λ_X : \mathbf{1}_{\mathcal{C}} ⊗ X ≅ X\) and \(ρ_X : X ⊗ \mathbf{1}_{\mathcal{C}} ≅ X\). </p>
+<p>These associators and unitors satisfy the pentagon and triangle identities. </p>
+</div>
+
+    <a class="latex_link" href="index.html#def:monoidal-category">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.MonoidalCategory">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:monoidal-closed_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:monoidal-closed" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">9</span><span class="definition_thmtitle">Monoidal closed category</span></div>
+    <div class="thm_thmcontent">
+</div>
+
+    <a class="latex_link" href="index.html#def:monoidal-closed">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.MonoidalClosed">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:nno_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:nno" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">13</span><span class="definition_thmtitle">Natural Numbers Object</span></div>
+    <div class="thm_thmcontent"><p>   In a topos \(\mathcal{C}\), a <em>natural numbers object</em> is an object \(N\) with morphisms \(0 : 1 \to N\) and \(s : N \to N\) satisfying the appropriate universal property. </p>
+</div>
+
+    <a class="latex_link" href="index.html#def:nno">LaTeX</a>
+    
+    
+  
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:subobject-classifier_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:subobject-classifier" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">11</span><span class="definition_thmtitle">Subobject Classifier</span></div>
+    <div class="thm_thmcontent">
+<p>In a category \(C\) with chosen finite limits, a chosen <em>subobject classifier</em> consists of: </p>
+<ol class="enumerate">
+  <li><p>An object \(\Omega \) </p>
+</li>
+  <li><p>A monomorphism \(\text{true} : 1 \to \Omega \) </p>
+</li>
+  <li><p>For every monomorphism \(m : U \to X\), a unique assigned morphism \(\chi _m : X \to \Omega \) (the <em>characteristic morphism</em>) such that the square </p>
+<div class="displaymath" id="a0000000009">
+  \[ \begin{tikzcd} 
+        U \ar[r] \ar[d, "m"'] & 1 \ar[d, "\text{true}"] \\
+        X \ar[r, "\chi_m"'] & \Omega
+      \end{tikzcd} \]
+</div>
+<p> is a pullback. </p>
+</li>
+</ol>
+</div>
+
+    <a class="latex_link" href="index.html#def:subobject-classifier">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.ChosenSubobjectClassifier">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:topos_with_nno_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:topos_with_nno" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">14</span><span class="definition_thmtitle">Topos with NNO</span></div>
+    <div class="thm_thmcontent"><p>   A topos equipped with a natural numbers object. </p>
+</div>
+
+    <a class="latex_link" href="index.html#def:topos_with_nno">LaTeX</a>
+    
+    
+  
     
     
   
@@ -201,14 +438,14 @@
       <span class="lemma_thmcaption">
       Lemma
       </span>
-      <span class="lemma_thmlabel">6</span><span class="lemma_thmtitle">Chosen Finite Products from Limits</span></div>
+      <span class="lemma_thmlabel">7</span><span class="lemma_thmtitle">Chosen Finite Products from Limits</span></div>
     <div class="thm_thmcontent"><p>    If a category \(C\) has chosen finite limits, then it has chosen finite products. </p>
 </div>
 
     <a class="latex_link" href="index.html#lem:chosen-finite-products-from-limits">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.ChosenFiniteProducts_From_ChosenFiniteLimits">Lean</a>
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.ChosenFiniteProducts_From_ChosenFiniteLimits">Lean</a>
     
     
   
@@ -238,7 +475,37 @@
     <a class="latex_link" href="index.html#prop:chosen-limit-implies-limit">LaTeX</a>
     
     
-  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.hasLimit_From_chosenLimit">Lean</a>
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.hasLimit_From_chosenLimit">Lean</a>
+    
+    
+  
+    
+  </div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="prop:limit-implies-chosen-limit_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="prop:limit-implies-chosen-limit" style="display: none">
+    <div class="thm_thmheading">
+      <span class="proposition_thmcaption">
+      Proposition
+      </span>
+      <span class="proposition_thmlabel">3</span><span class="proposition_thmtitle">Existence of limits implies chosen limit</span></div>
+    <div class="thm_thmcontent">
+</div>
+
+    <a class="latex_link" href="index.html#prop:limit-implies-chosen-limit">LaTeX</a>
+    
+    
+  <a class="lean_link lean_decl" href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.chosenLimit_From_hasLimit">Lean</a>
     
     
   
@@ -266,7 +533,7 @@ graphContainer.graphviz({useWorker: true})
     .width(width)
     .height(height)
     .fit(true)
-    .renderDot(`strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	"def:chosen-limit"	[color=green,		fillcolor="#B0ECA3",		label="chosen-limit",		shape=box,		style=filled];	"prop:chosen-limit-implies-limit"	[color=green,		label="chosen-limit-implies-limit",		shape=ellipse];	"def:chosen-limit" -> "prop:chosen-limit-implies-limit"	[style=dashed];	"lem:chosen-finite-products-from-limits"	[color=blue,		fillcolor="#1CAC78",		label="chosen-finite-products-from-limits",		shape=ellipse,		style=filled];	"def:chosen-finite-limits"	[color=green,		fillcolor="#B0ECA3",		label="chosen-finite-limits",		shape=box,		style=filled];	"def:chosen-finite-limits" -> "lem:chosen-finite-products-from-limits"	[style=dashed];	"def:chosen-finite-products"	[color=darkgreen,		fillcolor="#B0ECA3",		label="chosen-finite-products",		shape=box,		style=filled];	"def:chosen-finite-products" -> "lem:chosen-finite-products-from-limits"	[style=dashed];	"def:chosen-limits-of-shape"	[color=green,		fillcolor="#B0ECA3",		label="chosen-limits-of-shape",		shape=box,		style=filled];}`)
+    .renderDot(`strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	"def:chosen-limit"	[color=green,		fillcolor="#B0ECA3",		label="chosen-limit",		shape=box,		style=filled];	"def:chosen-limits-of-shape"	[color=green,		fillcolor="#B0ECA3",		label="chosen-limits-of-shape",		shape=box,		style=filled];	"def:chosen-limit" -> "def:chosen-limits-of-shape"	[style=dashed];	"prop:chosen-limit-implies-limit"	[color=green,		fillcolor="#1CAC78",		label="chosen-limit-implies-limit",		shape=ellipse,		style=filled];	"def:chosen-limit" -> "prop:chosen-limit-implies-limit"	[style=dashed];	"def:chosen-finite-limits"	[color=green,		fillcolor="#B0ECA3",		label="chosen-finite-limits",		shape=box,		style=filled];	"def:chosen-limits-of-shape" -> "def:chosen-finite-limits"	[style=dashed];	"def:subobject-classifier"	[color="#FFAA33",		label="subobject-classifier",		shape=box];	"def:chosen-finite-limits" -> "def:subobject-classifier"	[style=dashed];	"lem:chosen-finite-products-from-limits"	[color=green,		fillcolor="#1CAC78",		label="chosen-finite-products-from-limits",		shape=ellipse,		style=filled];	"def:chosen-finite-limits" -> "lem:chosen-finite-products-from-limits"	[style=dashed];	"def:elementary_topos"	[color="#FFAA33",		label=elementary_topos,		shape=box];	"def:subobject-classifier" -> "def:elementary_topos"	[style=dashed];	"def:nno"	[color="#FFAA33",		label=nno,		shape=box];	"def:elementary_topos" -> "def:nno"	[style=dashed];	"def:topos_with_nno"	[color="#FFAA33",		label=topos_with_nno,		shape=box];	"def:nno" -> "def:topos_with_nno"	[style=dashed];	"def:monoidal-closed"	[color=darkgreen,		fillcolor="#B0ECA3",		label="monoidal-closed",		shape=box,		style=filled];	"def:cartesian-closed"	[color=darkgreen,		fillcolor="#B0ECA3",		label="cartesian-closed",		shape=box,		style=filled];	"def:monoidal-closed" -> "def:cartesian-closed"	[style=dashed];	"def:monoidal-category"	[color=darkgreen,		fillcolor="#B0ECA3",		label="monoidal-category",		shape=box,		style=filled];	"def:monoidal-category" -> "def:monoidal-closed"	[style=dashed];	"def:chosen-finite-products"	[color=darkgreen,		fillcolor="#B0ECA3",		label="chosen-finite-products",		shape=box,		style=filled];	"def:chosen-finite-products" -> "lem:chosen-finite-products-from-limits"	[style=dashed];	"def:chosen-finite-products" -> "def:cartesian-closed"	[style=dashed];	"prop:limit-implies-chosen-limit"	[color=green,		fillcolor="#1CAC78",		label="limit-implies-chosen-limit",		shape=ellipse,		style=filled];}`)
     .on("end", interactive);
 
 latexLabelEscaper = function(label) {

@@ -1,14 +1,14 @@
 % In this file you should put the actual content of the blueprint.
 % It will be used both by the web and the print version.
 % It should *not* include the \begin{document}
-%
-% If you want to split the blueprint content into several files then
-% the current file can be a simple sequence of \input. Otherwise It
-% can start with a \section or \chapter for instance.
+%   
+%   If you want to split the blueprint content into several files then
+%   the current file can be a simple sequence of \input. Otherwise It
+%   can start with a \section or \chapter for instance.
 
 \section{Introduction}
 
-An \emph{elementary topos} is a Cartesian closed category with finite limits and a subobject classifier. The goal of this project is to formalise this definition in a suitable way. Namely, in mathlib Cartesian closed categories are defined via \emph{chosen} finite products, which realise finite products as an algebraic operation in a category; for each finite product diagram we \emph{choose} a specific object to serve as the product, rather than only asking for the existence of such a product. Classically, we can still, using the axiom of choice, get chosen limits from existence.
+An \emph{elementary topos} is a Cartesian closed category with finite limits and a subobject classifier. The goal of this project is to formalise this definition in a suitable way. Namely, in mathlib Cartesian closed categories are defined via \emph{chosen} finite products, which realise finite products as an algebraic operation in a category; for each finite product diagram we \emph{choose} a specific object to serve as the product, rather than only asking for the existence of such a product. Classically, we can still, using the axiom of choice, get chosen limits from mere existence.
 
 The first part of the project will be extending this to define finite chosen limits in general -- this will allow us to work more naturally in a topos, and keep with the existing definition of Cartesian closedness by getting an instance for chosen finite products from limits.
 
@@ -24,17 +24,17 @@ The first step is to generalise chosen finite products to general finite limit c
 
 \begin{definition}[Chosen Limit]
   \label{def:chosen-limit}
-  \lean{CategoryTheory.Limits.ChosenLimit}
+  \lean{CategoryTheory.ChosenLimit}
   \leanok
-Let $F : J \to C$ be a functor. A \emph{chosen limit} for $F$ is a specified limit cone for $F$.
+  Let $F : J \to C$ be a functor. A \emph{chosen limit} for $F$ is a specified limit cone for $F$.
 \end{definition}
 
 \begin{proposition}[Chosen Limit implies Limit]
-\label{prop:chosen-limit-implies-limit}
-\lean{CategoryTheory.Limits.hasLimit_From_chosenLimit}
-\leanok
-\uses{def:chosen-limit}
-If we have a chosen limit for a functor $F$, then $F$ has a limit.
+  \label{prop:chosen-limit-implies-limit}
+  \lean{CategoryTheory.hasLimit_From_chosenLimit}
+  \leanok
+  \uses{def:chosen-limit}
+  If we have a chosen limit for a functor $F$, then $F$ has a limit.
 \end{proposition}
 
 \begin{proof}
@@ -42,44 +42,57 @@ If we have a chosen limit for a functor $F$, then $F$ has a limit.
   An inhabited set is nonempty.
 \end{proof}
 
+Under choice, the reverse also holds. 
+
+\begin{proposition}[Existence of limits implies chosen limit]
+  \label{prop:limit-implies-chosen-limit}
+  \lean{CategoryTheory.chosenLimit_From_hasLimit}
+  \leanok
+\end{proposition}
+
+\begin{proof}
+  \leanok
+  Classically, a nonempty set is inhabited.
+\end{proof}
+
 \begin{definition}[Chosen Limits of Shape]
   \label{def:chosen-limits-of-shape}
-  \lean{CategoryTheory.Limits.ChosenLimitsOfShape}
+  \lean{CategoryTheory.ChosenLimitsOfShape}
   \uses{def:chosen-limit}
   \leanok
-A category $C$ has \emph{chosen limits of shape} $J$ if every functor $F : J \to C$ has a chosen limit.
+  A category $C$ has \emph{chosen limits of shape} $J$ if every functor $F : J \to C$ has a chosen limit.
 \end{definition}
 
 \begin{definition}[Chosen Finite Limits]
-\label{def:chosen-finite-limits}
-\lean{CategoryTheory.Limits.ChosenFiniteLimits}
-\uses{def:chosen-limits-of-shape}
-\leanok
-A category $C$ has \emph{chosen finite limits} if it has chosen limits of shape $J$ for every finite category $J$, i.~e.~ for every finite limit cone.
+  \label{def:chosen-finite-limits}
+  \lean{CategoryTheory.ChosenFiniteLimits}
+  \uses{def:chosen-limits-of-shape}
+  \leanok
+  A category $C$ has \emph{chosen finite limits} if it has chosen limits of shape $J$ for every finite category $J$, i.~e.~ for every finite limit cone.
 \end{definition}
 
 Note that Mathlib already provides a concept of chosen finite product it uses internally for Cartesian closed categories.
 
 \begin{definition}[Chosen Finite Products]
-\label{def:chosen-finite-products}
-\lean{CategoryTheory.ChosenFiniteProducts}
-\mathlibok
-A category $C$ has \emph{chosen finite products} if it is equipped with:
-\begin{itemize}
-\item A choice of a limit binary fan (product) for any two objects of the category.
-\item A choice of a terminal object.
-\end{itemize}
-More precisely, this consists of chosen limit cones for the pair functor $X \leftarrow \cdot \rightarrow Y$ and for the empty functor from the empty category.
+  \label{def:chosen-finite-products}
+  \lean{CategoryTheory.ChosenFiniteProducts}
+  \mathlibok
+  A category $C$ has \emph{chosen finite products} if it is equipped with:
+  \begin{itemize}
+  \item A choice of a limit binary fan (product) for any two objects of the category.
+  \item A choice of a terminal object.
+  \end{itemize}
+  More precisely, this consists of chosen limit cones for the pair functor $X \leftarrow \cdot \rightarrow Y$ and for the empty functor from the empty category.
 \end{definition}
 
 Note that our definition is compatible, so that a category with chosen finite limits in particular has an instance of chosen finite products.
 
 \begin{lemma}[Chosen Finite Products from Limits]
   \label{lem:chosen-finite-products-from-limits}
-  \lean{CategoryTheory.Limits.ChosenFiniteProducts_From_ChosenFiniteLimits}
+  \lean{CategoryTheory.ChosenFiniteProducts_From_ChosenFiniteLimits}
   \leanok
-\uses{def:chosen-finite-limits, def:chosen-finite-products}
-If a category $C$ has chosen finite limits, then it has chosen finite products.
+  \uses{def:chosen-finite-limits, def:chosen-finite-products}
+  If a category $C$ has chosen finite limits, then it has chosen finite products.
 \end{lemma}
 
 \begin{proof}
@@ -87,10 +100,97 @@ If a category $C$ has chosen finite limits, then it has chosen finite products.
   \leanok
 \end{proof}
 
+\section{Cartesian Closedness}
+
+The notion of a Cartesian closed category is already defined in Mathlib, so we just state the definitions.
+
+\begin{definition}[Monoidal category]
+  \label{def:monoidal-category}
+  \lean{CategoryTheory.MonoidalCategory}
+  \mathlibok
+
+In a \emph{monoidal category} \(\mathcal{C}\), we can take the \emph{tensor product} of objects, \(X ⊗ Y\) and of morphisms \(f ⊗ g\).
+The tensor product does not need to be strictly associative on objects,
+but there is a specified \emph{associator}, \(α_{X Y Z} : (X ⊗ Y) ⊗ Z ≅ X ⊗ (Y ⊗ Z)\).
+There is a tensor unit \(\mathbf{1}_{\mathcal{C}}\),
+with specified left and right \emph{unitor isomorphisms}
+\(λ_X : \mathbf{1}_{\mathcal{C}} ⊗ X ≅ X\)
+and \(ρ_X : X ⊗ \mathbf{1}_{\mathcal{C}} ≅ X\).
+
+These associators and unitors satisfy the pentagon and triangle identities.
+\end{definition}
+
+\begin{definition}[Monoidal closed category]
+  \label{def:monoidal-closed}
+  \lean{CategoryTheory.MonoidalClosed}
+  \uses{def:monoidal-category}
+  \mathlibok
+  
+\end{definition}
+
+\begin{definition}[Cartesian closed category] 
+  \label{def:cartesian-closed}
+  \lean{CategoryTheory.CartesianClosed}
+  \uses{def:monoidal-closed, def:chosen-finite-products}
+  \mathlibok
+  A category \(\mathcal{C}\) is \emph{cartesian closed} if it has finite products and every object is exponentiable.
+
+  We define this as a monoidal closed category with respect to the cartesian monoidal structure.
+\end{definition}
+
 \section{Subobject Classifiers}
+
+\begin{definition}[Subobject Classifier]
+  \label{def:subobject-classifier}
+  \lean{CategoryTheory.ChosenSubobjectClassifier}
+  \uses{def:chosen-finite-limits}
+  \notready
+
+  In a category $C$ with chosen finite limits, a chosen \emph{subobject classifier} consists of:
+  \begin{enumerate}
+  \item An object $\Omega$
+  \item A monomorphism $\text{true} : 1 \to \Omega$ 
+  \item For every monomorphism $m : U \to X$, a unique assigned morphism $\chi_m : X \to \Omega$ (the \emph{characteristic morphism}) such that the square
+    \[\begin{tikzcd}
+        U \ar[r] \ar[d, "m"'] & 1 \ar[d, "\text{true}"] \\
+        X \ar[r, "\chi_m"'] & \Omega
+      \end{tikzcd}\]
+    is a pullback.
+  \end{enumerate}
+\end{definition}
+
 \section{Elementary Toposes}
+
+\begin{definition}[Elementary Topos]
+\label{def:elementary_topos}
+\lean{CategoryTheory.ElementaryTopos}
+\uses{def:chosen-finite-limits, def:cartesian-closed-category, def:subobject-classifier}
+\notready
+An \emph{elementary topos} is a category $\mathcal{C}$ that
+\begin{enumerate}
+\item has chosen finite limits,
+\item is cartesian closed for the inherited chosen finite products,
+\item has a subobject classifier.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Natural Numbers Object]
+\label{def:nno}
+\uses{def:elementary_topos}
+\notready
+In a topos $\mathcal{C}$, a \emph{natural numbers object} is an object $N$ with morphisms $0 : 1 \to N$ and $s : N \to N$ satisfying the appropriate universal property.
+\end{definition}
+
+\begin{definition}[Topos with NNO]
+\label{def:topos_with_nno}
+\uses{def:elementary_topos, def:nno}
+\notready
+A topos equipped with a natural numbers object.
+\end{definition}
+
 \section{Examples}
 \subsection{Finite Sets}
 \subsection{The Category of Types}
 \subsection{Presheaves}
 \subsection{Sheaves}
+

@@ -4,17 +4,15 @@ import Mathlib.CategoryTheory.Limits.HasLimits
 import Mathlib.CategoryTheory.FinCategory.AsType
 import Mathlib.CategoryTheory.ChosenFiniteProducts
 
-open CategoryTheory CategoryTheory.Category CategoryTheory.Functor Opposite
+open CategoryTheory CategoryTheory.Category CategoryTheory.Functor Opposite CategoryTheory.Limits
 
-namespace CategoryTheory.Limits
+namespace CategoryTheory
 
 universe v₁ u₁ v₂ u₂ v₃ u₃ v v' v'' u u' u''
 
 variable {J : Type u₁} [Category.{v₁} J] -- {K : Type u₂} [Category.{v₂} K]
 variable {C : Type u} [Category.{v, u} C]
 -- variable {F : J ⥤ C}
-
-section Limit
 
 /-- `ChosenLimit F` represents the chosen existence of a limit for `F`. -/
 class ChosenLimit (F : J ⥤ C) where
@@ -25,6 +23,12 @@ class ChosenLimit (F : J ⥤ C) where
 instance hasLimit_From_chosenLimit {F : J ⥤ C} (d : ChosenLimit F) : HasLimit F := by
   constructor
   exact ⟨d.chosen_limit.default⟩
+
+/-- The existence of a limit gives rise to a chosen limit via choice. -/
+noncomputable instance chosenLimit_From_hasLimit {F : J ⥤ C} (d : HasLimit F) : ChosenLimit F := by
+  constructor
+  have h1 := d.exists_limit
+  exact Classical.inhabited_of_nonempty h1
 
 /-- `C` has chosen limits of shape `J` if for every functor `F : J ⥤ C` we have its chosen limit. -/
 class ChosenLimitsOfShape (J : Type u₁) [Category.{v₁} J] (C : Type u) [Category.{v, u} C] where

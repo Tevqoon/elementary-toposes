@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.24)  23 JUL 2025 17:01
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.24)  23 JUL 2025 19:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1027,19 +1027,27 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 
 [1
 
-]) [2]
-(/Users/jure/Documents/repos/elementary-toposes/blueprint/print/print.aux)
+] [2]
+
+LaTeX Warning: Reference `def:cartesian-closed-category' on page 3 undefined on
+ input line 167.
+
+) [3] (/Users/jure/Documents/repos/elementary-toposes/blueprint/print/print.aux
+)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `print.out' has not changed.
-(rerunfilecheck)             Checksum: 0276B4426A51DE01654D671C8FFBCCE8;1107.
+(rerunfilecheck)             Checksum: 7D9883A29FB2CC642CCA7BCC677409D8;1254.
  ) 
 Here is how much of TeX's memory you used:
- 27784 strings out of 476179
- 562893 string characters out of 5809544
- 1045861 words of memory out of 5000000
- 48100 multiletter control sequences out of 15000+600000
- 474614 words of font info for 75 fonts, out of 8000000 for 9000
+ 27914 strings out of 476179
+ 566142 string characters out of 5809544
+ 1044861 words of memory out of 5000000
+ 48226 multiletter control sequences out of 15000+600000
+ 474630 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 100i,6n,115p,633b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 100i,13n,115p,638b,1151s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on /Users/jure/Documents/repos/elementary-toposes/blueprint/prin
-t/print.pdf (2 pages).
+t/print.pdf (3 pages).

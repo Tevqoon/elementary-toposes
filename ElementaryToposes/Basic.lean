@@ -9,23 +9,17 @@ import Mathlib.Topology.Sheaves.Presheaf
 import Mathlib.CategoryTheory.Sites.Sheaf
 import Mathlib.CategoryTheory.Sites.Spaces
 
+import ElementaryToposes.Topos
+
 open CategoryTheory Sieve Limits Opposite Category
 
 universe u u₁ u₂ v v₁ v₂
 
 noncomputable section
 
-class Topos (C : Type u) extends Category.{v} C where
-  finiteLimits : Limits.HasFiniteLimits C
-  finProd : Limits.HasFiniteProducts C := inferInstance
-  chosenFinProd : ChosenFiniteProducts C := ChosenFiniteProducts.ofFiniteProducts C
-  cartesian : CartesianClosed C
-
 variable {C : Type u₁} [Category.{v₁} C]
 variable (J : GrothendieckTopology C)
 variable (A : Type u₂) [Category.{v₂} A]
-
-#check (Sheaf J A)
 
 -- Define chosen limits
 -- Get chosen finite products

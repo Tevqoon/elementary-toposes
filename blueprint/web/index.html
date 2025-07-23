@@ -36,7 +36,7 @@
 </p>
 </div>
 <h1 id="a0000000002">1 Introduction</h1>
-<p>An <em>elementary topos</em> is a Cartesian closed category with finite limits and a subobject classifier. The goal of this project is to formalise this definition in a suitable way. Namely, in mathlib Cartesian closed categories are defined via <em>chosen</em> finite products, which realise finite products as an algebraic operation in a category; for each finite product diagram we <em>choose</em> a specific object to serve as the product, rather than only asking for the existence of such a product. Classically, we can still, using the axiom of choice, get chosen limits from existence. </p>
+<p>An <em>elementary topos</em> is a Cartesian closed category with finite limits and a subobject classifier. The goal of this project is to formalise this definition in a suitable way. Namely, in mathlib Cartesian closed categories are defined via <em>chosen</em> finite products, which realise finite products as an algebraic operation in a category; for each finite product diagram we <em>choose</em> a specific object to serve as the product, rather than only asking for the existence of such a product. Classically, we can still, using the axiom of choice, get chosen limits from mere existence. </p>
 <p>The first part of the project will be extending this to define finite chosen limits in general – this will allow us to work more naturally in a topos, and keep with the existing definition of Cartesian closedness by getting an instance for chosen finite products from limits. </p>
 <p>The second part will be defining a subobject classifier, which we will again see as a chosen subobject classifier – an object of truth values \(\Omega \) in the category with a monomorphism \(\operatorname {true} : 1 \rightarrow \Omega \) and a unique characteristic morphism \(\chi _{U} : X \rightarrow \Omega \) for any monomorphism \(U \rightarrow X\). </p>
 <p>If time permits, we will also define a chosen natural numbers object, allowing us to also consider NNO-topoi. </p>
@@ -72,7 +72,7 @@
         
         <ul class="uses">
           
-          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.ChosenLimit" class="lean_decl">CategoryTheory.Limits.ChosenLimit</a></li>
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.ChosenLimit" class="lean_decl">CategoryTheory.ChosenLimit</a></li>
           
         </ul>
     
@@ -102,6 +102,9 @@
     <div class="thm_header_hidden_extras">
 
     <a class="icon proof" href="index.html#prop:chosen-limit-implies-limit">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000004"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
     
     
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
@@ -136,7 +139,7 @@
         
         <ul class="uses">
           
-          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.hasLimit_From_chosenLimit" class="lean_decl">CategoryTheory.Limits.hasLimit_From_chosenLimit</a></li>
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.hasLimit_From_chosenLimit" class="lean_decl">CategoryTheory.hasLimit_From_chosenLimit</a></li>
           
         </ul>
     
@@ -151,12 +154,84 @@
 
   </div>
 </div>
+<div class="proof_wrapper" id="a0000000004">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>An inhabited set is nonempty. </p>
+
+  </div>
+</div>
+<p>Under choice, the reverse also holds. </p>
+<div class="proposition_thmwrapper theorem-style-plain" id="prop:limit-implies-chosen-limit">
+  <div class="proposition_thmheading">
+    <span class="proposition_thmcaption">
+    Proposition
+    </span>
+    <span class="proposition_thmlabel">3</span>
+    <span class="proposition_thmtitle">Existence of limits implies chosen limit</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#prop:limit-implies-chosen-limit">#</a>
+    
+    <a class="icon proof" href="index.html#a0000000005"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.chosenLimit_From_hasLimit" class="lean_decl">CategoryTheory.chosenLimit_From_hasLimit</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="proposition_thmcontent">
+  
+
+  </div>
+</div>
+<div class="proof_wrapper" id="a0000000005">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <span class="expand-proof">▶</span>
+  </div>
+  <div class="proof_content">
+  <p>Classically, a nonempty set is inhabited. </p>
+
+  </div>
+</div>
 <div class="definition_thmwrapper theorem-style-definition" id="def:chosen-limits-of-shape">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">3</span>
+    <span class="definition_thmlabel">4</span>
     <span class="definition_thmtitle">Chosen Limits of Shape</span>
     <div class="thm_header_extras">
 
@@ -168,6 +243,26 @@
     <a class="icon proof" href="index.html#def:chosen-limits-of-shape">#</a>
     
     
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="index.html#def:chosen-limit">Definition 1</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
     
     <button class="modal lean">L∃∀N</button>
         <div class="modal-container">
@@ -180,7 +275,7 @@
         
         <ul class="uses">
           
-          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.ChosenLimitsOfShape" class="lean_decl">CategoryTheory.Limits.ChosenLimitsOfShape</a></li>
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.ChosenLimitsOfShape" class="lean_decl">CategoryTheory.ChosenLimitsOfShape</a></li>
           
         </ul>
     
@@ -191,7 +286,7 @@
         </div>
   </div>
   <div class="definition_thmcontent">
-  <p>   A category \(C\) has <em>chosen limits of shape</em> \(J\) if every functor \(F : J \to C\) has a chosen limit. </p>
+  <p>    A category \(C\) has <em>chosen limits of shape</em> \(J\) if every functor \(F : J \to C\) has a chosen limit. </p>
 
   </div>
 </div>
@@ -200,7 +295,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">4</span>
+    <span class="definition_thmlabel">5</span>
     <span class="definition_thmtitle">Chosen Finite Limits</span>
     <div class="thm_header_extras">
 
@@ -212,6 +307,26 @@
     <a class="icon proof" href="index.html#def:chosen-finite-limits">#</a>
     
     
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="index.html#def:chosen-limits-of-shape">Definition 4</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
     
     <button class="modal lean">L∃∀N</button>
         <div class="modal-container">
@@ -224,7 +339,7 @@
         
         <ul class="uses">
           
-          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.ChosenFiniteLimits" class="lean_decl">CategoryTheory.Limits.ChosenFiniteLimits</a></li>
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.ChosenFiniteLimits" class="lean_decl">CategoryTheory.ChosenFiniteLimits</a></li>
           
         </ul>
     
@@ -235,7 +350,7 @@
         </div>
   </div>
   <div class="definition_thmcontent">
-  <p>   A category \(C\) has <em>chosen finite limits</em> if it has chosen limits of shape \(J\) for every finite category \(J\), i.&#160;e.&#160; for every finite limit cone. </p>
+  <p>    A category \(C\) has <em>chosen finite limits</em> if it has chosen limits of shape \(J\) for every finite category \(J\), i.&#160;e.&#160; for every finite limit cone. </p>
 
   </div>
 </div>
@@ -245,7 +360,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">5</span>
+    <span class="definition_thmlabel">6</span>
     <span class="definition_thmtitle">Chosen Finite Products</span>
     <div class="thm_header_extras">
 
@@ -297,16 +412,18 @@
     <span class="lemma_thmcaption">
     Lemma
     </span>
-    <span class="lemma_thmlabel">6</span>
+    <span class="lemma_thmlabel">7</span>
     <span class="lemma_thmtitle">Chosen Finite Products from Limits</span>
     <div class="thm_header_extras">
 
+    
+    ✓
         </div>
     <div class="thm_header_hidden_extras">
 
     <a class="icon proof" href="index.html#lem:chosen-finite-products-from-limits">#</a>
     
-    <a class="icon proof" href="index.html#a0000000004"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
+    <a class="icon proof" href="index.html#a0000000006"><svg  class="icon icon-cogs "><use xlink:href="symbol-defs.svg#icon-cogs"></use></svg>
 </a>
     
     
@@ -322,9 +439,9 @@
         
         <ul class="uses">
           
-          <li><a href="index.html#def:chosen-finite-limits">Definition 4</a></li>
+          <li><a href="index.html#def:chosen-finite-limits">Definition 5</a></li>
           
-          <li><a href="index.html#def:chosen-finite-products">Definition 5</a></li>
+          <li><a href="index.html#def:chosen-finite-products">Definition 6</a></li>
           
         </ul>
     
@@ -344,7 +461,7 @@
         
         <ul class="uses">
           
-          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.Limits.ChosenFiniteProducts_From_ChosenFiniteLimits" class="lean_decl">CategoryTheory.Limits.ChosenFiniteProducts_From_ChosenFiniteLimits</a></li>
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.ChosenFiniteProducts_From_ChosenFiniteLimits" class="lean_decl">CategoryTheory.ChosenFiniteProducts_From_ChosenFiniteLimits</a></li>
           
         </ul>
     
@@ -359,7 +476,7 @@
 
   </div>
 </div>
-<div class="proof_wrapper" id="a0000000004">
+<div class="proof_wrapper" id="a0000000006">
   <div class="proof_heading">
     <span class="proof_caption">
     Proof
@@ -371,13 +488,430 @@
 
   </div>
 </div>
-<h1 id="a0000000005">3 Subobject Classifiers</h1>
-<h1 id="a0000000006">4 Elementary Toposes</h1>
-<h1 id="a0000000007">5 Examples</h1>
-<h2 id="a0000000008">5.1 Finite Sets</h2>
-<h2 id="a0000000009">5.2 The Category of Types</h2>
-<h2 id="a0000000010">5.3 Presheaves</h2>
-<h2 id="a0000000011">5.4 Sheaves</h2>
+<h1 id="a0000000007">3 Cartesian Closedness</h1>
+<p>The notion of a Cartesian closed category is already defined in Mathlib, so we just state the definitions. </p>
+<div class="definition_thmwrapper theorem-style-definition" id="def:monoidal-category">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">8</span>
+    <span class="definition_thmtitle">Monoidal category</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#def:monoidal-category">#</a>
+    
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.MonoidalCategory" class="lean_decl">CategoryTheory.MonoidalCategory</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p>In a <em>monoidal category</em> \(\mathcal{C}\), we can take the <em>tensor product</em> of objects, \(X ⊗ Y\) and of morphisms \(f ⊗ g\). The tensor product does not need to be strictly associative on objects, but there is a specified <em>associator</em>, \(α_{X Y Z} : (X ⊗ Y) ⊗ Z ≅ X ⊗ (Y ⊗ Z)\). There is a tensor unit \(\mathbf{1}_{\mathcal{C}}\), with specified left and right <em>unitor isomorphisms</em> \(λ_X : \mathbf{1}_{\mathcal{C}} ⊗ X ≅ X\) and \(ρ_X : X ⊗ \mathbf{1}_{\mathcal{C}} ≅ X\). </p>
+<p>These associators and unitors satisfy the pentagon and triangle identities. </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="def:monoidal-closed">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">9</span>
+    <span class="definition_thmtitle">Monoidal closed category</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#def:monoidal-closed">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="index.html#def:monoidal-category">Definition 8</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.MonoidalClosed" class="lean_decl">CategoryTheory.MonoidalClosed</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="def:cartesian-closed">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">10</span>
+    <span class="definition_thmtitle">Cartesian closed category</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#def:cartesian-closed">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="index.html#def:monoidal-closed">Definition 9</a></li>
+          
+          <li><a href="index.html#def:chosen-finite-products">Definition 6</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.CartesianClosed" class="lean_decl">CategoryTheory.CartesianClosed</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>    A category \(\mathcal{C}\) is <em>cartesian closed</em> if it has finite products and every object is exponentiable. </p>
+<p>We define this as a monoidal closed category with respect to the cartesian monoidal structure. </p>
+
+  </div>
+</div>
+<h1 id="a0000000008">4 Subobject Classifiers</h1>
+<div class="definition_thmwrapper theorem-style-definition" id="def:subobject-classifier">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">11</span>
+    <span class="definition_thmtitle">Subobject Classifier</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#def:subobject-classifier">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="index.html#def:chosen-finite-limits">Definition 5</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.ChosenSubobjectClassifier" class="lean_decl">CategoryTheory.ChosenSubobjectClassifier</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p>In a category \(C\) with chosen finite limits, a chosen <em>subobject classifier</em> consists of: </p>
+<ol class="enumerate">
+  <li><p>An object \(\Omega \) </p>
+</li>
+  <li><p>A monomorphism \(\text{true} : 1 \to \Omega \) </p>
+</li>
+  <li><p>For every monomorphism \(m : U \to X\), a unique assigned morphism \(\chi _m : X \to \Omega \) (the <em>characteristic morphism</em>) such that the square </p>
+<div class="displaymath" id="a0000000009">
+  \[ \begin{tikzcd} 
+        U \ar[r] \ar[d, "m"'] & 1 \ar[d, "\text{true}"] \\
+        X \ar[r, "\chi_m"'] & \Omega
+      \end{tikzcd} \]
+</div>
+<p> is a pullback. </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<h1 id="a0000000010">5 Elementary Toposes</h1>
+<div class="definition_thmwrapper theorem-style-definition" id="def:elementary_topos">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">12</span>
+    <span class="definition_thmtitle">Elementary Topos</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#def:elementary_topos">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="index.html#def:chosen-finite-limits">Definition 5</a></li>
+          
+          <li><a href="index.html#def:subobject-classifier">Definition 11</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://Tevqoon.github.io/elementary-toposes/docs/find/#doc/CategoryTheory.ElementaryTopos" class="lean_decl">CategoryTheory.ElementaryTopos</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>    An <em>elementary topos</em> is a category \(\mathcal{C}\) that </p>
+<ol class="enumerate">
+  <li><p>has chosen finite limits, </p>
+</li>
+  <li><p>is cartesian closed for the inherited chosen finite products, </p>
+</li>
+  <li><p>has a subobject classifier. </p>
+</li>
+</ol>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="def:nno">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">13</span>
+    <span class="definition_thmtitle">Natural Numbers Object</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#def:nno">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="index.html#def:elementary_topos">Definition 12</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>   In a topos \(\mathcal{C}\), a <em>natural numbers object</em> is an object \(N\) with morphisms \(0 : 1 \to N\) and \(s : N \to N\) satisfying the appropriate universal property. </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="def:topos_with_nno">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">14</span>
+    <span class="definition_thmtitle">Topos with NNO</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="index.html#def:topos_with_nno">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="index.html#def:elementary_topos">Definition 12</a></li>
+          
+          <li><a href="index.html#def:nno">Definition 13</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>   A topos equipped with a natural numbers object. </p>
+
+  </div>
+</div>
+<h1 id="a0000000011">6 Examples</h1>
+<h2 id="a0000000012">6.1 Finite Sets</h2>
+<h2 id="a0000000013">6.2 The Category of Types</h2>
+<h2 id="a0000000014">6.3 Presheaves</h2>
+<h2 id="a0000000015">6.4 Sheaves</h2>
 
 </div> <!--main-text -->
 </div> <!-- content-wrapper -->
